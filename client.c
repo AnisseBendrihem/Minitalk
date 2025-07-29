@@ -6,7 +6,7 @@
 /*   By: abendrih <abendrih@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 19:09:00 by abendrih          #+#    #+#             */
-/*   Updated: 2025/07/29 06:55:03 by abendrih         ###   ########.fr       */
+/*   Updated: 2025/07/29 22:09:32 by abendrih         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void	send_message(int pid, char *str)
 		i++;
 	}
 	send_character(pid, '\0');
+	ft_printf("ROGER BIEN RECU\n");
 }
 
 int	main(int ac, char **av)
@@ -55,7 +56,7 @@ int	main(int ac, char **av)
 	struct sigaction	sa;
 
 	if (ac != 3)
-		return (ft_printf("Usage: ./client_bonus <pid> <message>\n"), 1);
+		return (ft_printf("Error argument\n"), 1);
 	sa.sa_handler = ack_handler;
 	sa.sa_flags = 0;
 	sigemptyset(&sa.sa_mask);
