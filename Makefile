@@ -6,7 +6,7 @@
 #    By: abendrih <abendrih@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/27 00:00:00 by toi               #+#    #+#              #
-#    Updated: 2025/07/29 21:42:03 by abendrih         ###   ########.fr        #
+#    Updated: 2025/07/30 00:51:23 by abendrih         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,5 +61,10 @@ fclean: clean
 	@echo "🧨 Binaires supprimés"
 
 re: fclean all
+
+run: all
+	@echo "🚀 Lancement du serveur en arrière-plan"
+	@./$(NAME_SERVER)
+
 
 .PHONY: all clean fclean re message
