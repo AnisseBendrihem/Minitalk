@@ -6,7 +6,7 @@
 /*   By: abendrih <abendrih@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 19:09:00 by abendrih          #+#    #+#             */
-/*   Updated: 2025/08/01 03:28:31 by abendrih         ###   ########.fr       */
+/*   Updated: 2025/08/04 01:48:50 by abendrih         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void	send_message(int pid, char *str)
 
 int	main(int ac, char **av)
 {
+	
 	struct sigaction	sa;
 
 	if (ac != 3)
